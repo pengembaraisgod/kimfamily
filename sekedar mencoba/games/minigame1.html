@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tebak Perasaan 💌</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background: linear-gradient(135deg, #ffb6c1, #ffe4e9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 { color: #800040; }
+    button {
+      background: #ff66a3;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    p { font-size: 18px; color: #550030; }
+  </style>
+</head>
+<body>
+  <h1>💌 Tebak Perasaan 💌</h1>
+  <p id="question">Apa yang Anya rasakan hari ini?</p>
+  <button onclick="guess()">Tebak Sekarang!</button>
+  <p id="result"></p>
+
+  <script>
+    const feelings = ["Bahagia 💖", "Rindu 🥺", "Canggung 😳", "Gemas 😆", "Sayang banget 💞"];
+    function guess() {
+      const random = feelings[Math.floor(Math.random() * feelings.length)];
+      document.getElementById("result").textContent = "Perasaannya: " + random;
+    }
+  </script>
+</body>
+</html>

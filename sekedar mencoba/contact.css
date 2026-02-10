@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: #fff;
+}
+
+.contact-container {
+  text-align: center;
+  max-width: 600px;
+}
+
+.contact-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  color: #eaeaea;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-card {
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  padding: 18px 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.25s ease, background 0.3s, color 0.3s;
+}
+
+.contact-card svg {
+  width: 28px;
+  height: 28px;
+}
+
+.contact-card span {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+/* Hover efek warna per platform */
+.contact-card.instagram:hover {
+  background: #E1306C;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.contact-card.discord:hover {
+  background: #5865F2;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.contact-card.facebook:hover {
+  background: #1877F2;
+  color: #fff;
+  transform: translateY(-5px);
+}

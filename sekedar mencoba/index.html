@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+          <img src="images/anya-anya-melfissa (3).gif" alt="Logo Website" class="logo">
+        </a>
+        <nav class="navigation">
+            <a href="#" class="active">About<span></span></a>
+            <a href="#">Service<span></span></a>
+            <a href="contact.html" target="_blank">Contact<span></span></a>
+            <a href="login.html" target="_blank">Register/Login<span></span></a>
+        </nav>
+    </header>
+<!-- Tombol buka sidebar -->
+<div class="side-toggle" id="sideToggle">&gt;</div>
+
+<!-- Sidebar tersembunyi -->
+<div class="side-panel" id="sidePanel">
+  <div class="panel-content">
+    <h2>🌟 Selamat Datang di Dunia Rahasiaku 🌟</h2>
+    <p>“Kadang yang paling seru itu bukan di depan mata, tapi di balik layar kiri ini 😜”</p>
+
+    <div class="panel-box">
+      <img src="images/anya-anya-melfissa (3).gif" alt="Anya" class="panel-avatar">
+      <p class="fun-text">Kamu menemukan ruang tersembunyi Anya! </p>
+    </div>
+
+    <button id="closePanel" class="close-btn">Tutup ✖</button>
+
+    <!-- 🔽 Tambahkan di bawah ini -->
+    <div class="mini-games">
+      <h3>Bukan Hal penting</h3>
+      <div class="game-bars">
+        <a href="games/minigame1.html" target="_blank" class="game-box">
+            <h4>💌 Tebak Perasaan</h4>
+            <p>Apakah kamu bisa menebak isi hati seseorang lewat kata-kata? 😳</p>
+        </a>
+
+        <a href="games/minigame2.html" target="_blank" class="game-box">
+            <h4>💞 Kecocokan Cinta</h4>
+            <p>Masukkan dua nama, dan lihat seberapa cocok kalian! 💖</p>
+        </a>
+
+        <a href="games/minigame3.html" target="_blank" class="game-box">
+            <h4> Galery Anya</h4>
+            <p>Galery Anya Melfissa</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <section class="parallax">
+        <h2 id="text">WelcomeK</h2>
+    </section>
+
+    <section class="sec">
+        <h2>parallax scrools</h2>
+        <p>
+            subjek tes tidak dimaksudkan untuk hal serius hanya 4fun<br><br>
+        </p>
+        </p>
+    </section>
+<script>
+  const toggleBtn = document.getElementById('sideToggle');
+  const panel = document.getElementById('sidePanel');
+  const closeBtn = document.getElementById('closePanel');
+
+  toggleBtn.addEventListener('click', () => {
+    panel.classList.add('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    panel.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>

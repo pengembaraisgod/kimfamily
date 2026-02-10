@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kecocokan Cinta 💞</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background: linear-gradient(135deg, #ffc3a0, #ffafbd);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    input {
+      padding: 8px;
+      margin: 5px;
+      border-radius: 8px;
+      border: none;
+      text-align: center;
+    }
+    button {
+      background: #ff4f81;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    h2 { color: #fff; }
+    #result { margin-top: 15px; color: #ffe; font-size: 20px; }
+  </style>
+</head>
+<body>
+  <h2>💞 Tes Kecocokan Cinta 💞</h2>
+  <input type="text" id="name1" placeholder="Nama Kamu">
+  <input type="text" id="name2" placeholder="Nama Dia">
+  <button onclick="checkLove()">Cek Kecocokan</button>
+  <p id="result"></p>
+
+  <script>
+    function checkLove() {
+      const name1 = document.getElementById("name1").value.trim();
+      const name2 = document.getElementById("name2").value.trim();
+      if(!name1 || !name2) {
+        document.getElementById("result").textContent = "Isi dulu dua-duanya 💌";
+        return;
+      }
+      const score = Math.floor(Math.random() * 100);
+      document.getElementById("result").textContent = `${name1} ❤️ ${name2} cocok ${score}%!`;
+    }
+  </script>
+</body>
+</html>
