@@ -39,17 +39,31 @@
   <button onclick="checkLove()">Cek Kecocokan</button>
   <p id="result"></p>
 
-  <script>
-    function checkLove() {
-      const name1 = document.getElementById("name1").value.trim();
-      const name2 = document.getElementById("name2").value.trim();
-      if(!name1 || !name2) {
-        document.getElementById("result").textContent = "Isi dulu dua-duanya 💌";
-        return;
-      }
-      const score = Math.floor(Math.random() * 100);
-      document.getElementById("result").textContent = `${name1} ❤️ ${name2} cocok ${score}%!`;
+<script>
+  function checkLove() {
+    const name1 = document.getElementById("name1").value.trim().toLowerCase();
+    const name2 = document.getElementById("name2").value.trim().toLowerCase();
+    
+    if (!name1 || !name2) {
+      document.getElementById("result").textContent = "Isi dulu dua-duanya 💌";
+      return;
     }
-  </script>
+
+    let score;
+
+    // Cek pasangan spesial
+    if (
+      (name1 === "gea" && (name2 === "diva" || name2 === "dipa")) ||
+      (name2 === "gea" && (name1 === "diva" || name1 === "dipa"))
+    ) {
+      score = 100;
+    } else {
+      score = Math.floor(Math.random() * 100);
+    }
+
+    document.getElementById("result").textContent = 
+      `${name1.charAt(0).toUpperCase() + name1.slice(1)} ❤️ ${name2.charAt(0).toUpperCase() + name2.slice(1)} cocok ${score}%!`;
+  }
+</script>
 </body>
 </html>
